@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Acer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Computer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Samsung.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/GeterSeter/Computer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/GeterSeter/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/House/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Icapsulacia/Leson.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Icapsulacia/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Kolekcia/Bite/ArrayListLeson.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Kolekcia/Bite/Devkolibri/ListKolection.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Kolekcia/Bite/Devkolibri/SetKolection.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Kolekcia/Leccia.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Kolekcia/Listik.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Konstruktor/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/JavaAplicator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/PanasonikA1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/PanasonikA2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/Vituaz1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/Vituaz2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Practichna/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Practichna/Spisok2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/TrivimirnijMasiv/Main.java" charset="UTF-8" />
+  </component>
+</project>
