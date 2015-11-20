@@ -33,6 +33,7 @@ public class Main {
         phone.add("+380937466778");
         phone.add("+380937466734");
 
+
         for (int i = 0; i < name.size(); i++) {
             System.out.println(name.get(i) + "  \t" + phone.get(i));
         }
@@ -71,7 +72,7 @@ public class Main {
         } else if (komanda.equals("редагувати")) {
             System.out.println("Введіть ім'я контакта ");
             String name1 = sc.next();
-            Integer index = name.indexOf(name1) ;
+            Integer index = name.indexOf(name1);
             System.out.println("Введіть змінене ім'я");
             String nameZmina = sc.next();
             System.out.println("Введіть змінений телефонний номер");
@@ -82,12 +83,28 @@ public class Main {
             phone.add(index, phoneZmina);
 
 
+        } else {
+            System.out.println("Введіть ім'я контакта ");
+            String name1 = sc.next();
+            if (name.contains(name1)) {
+                System.out.println("Ім'я заняте \n Введіть інше ім'я ");
+            } else {
+                name.add(name1);
+                System.out.println("Введіть номер телефона");
+                String phone1 = sc.next();
+                phone.add(phone1);
+            }
+
         }
+
+
         for (int i = 0; i < name.size(); i++) {
             System.out.println(name.get(i) + "  \t" + phone.get(i));
+            String key = null, volue;
+
+
+
         }
-
-
     }
 
 }

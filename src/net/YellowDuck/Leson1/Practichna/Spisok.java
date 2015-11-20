@@ -19,6 +19,9 @@ public class Spisok {
         pb.put("Вася " , "+380937466729");
         pb.put("Вася " , "+380937466729");
 
+        String aray[][] = new String[2][];
+        aray[1][0] = "name" ;
+        aray[1][1] = "phone";
     }
 }
 
