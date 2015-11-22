@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/Lesons/MapCplection/TreeMapDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Somostijno/Abstrakt/Animals.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Somostijno/Abstrakt/Main.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Acer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Computer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Main.java" charset="UTF-8" />
@@ -21,10 +24,11 @@
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/PanasonikA2.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/Vituaz1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Polimorfizm/Vituaz2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Practichna/Main.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Practichna/Spisok2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractichnaModern/Main.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractichnaModern/Pitanja.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/PhoneBookTreeMap/TreeMapPhoneBook.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/PractichnaModern/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/PractichnaModern/Pitanja.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/Spisok2.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/TrivimirnijMasiv/Main.java" charset="UTF-8" />
   </component>
 </project>
