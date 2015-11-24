@@ -1,6 +1,9 @@
 package net.YellowDuck.Leson1.PractechnaPara.Practichna.PhoneBookTreeMap;
 
-import java.util.*;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 
 /**
  * Created by Вася on 20.11.2015.
@@ -8,7 +11,7 @@ import java.util.*;
 public class TreeMapPhoneBook {
 
 
-    void mas() {
+    public void mas() {
         TreeMap<String, String> ph = new TreeMap<>();
         ph.put("Вася", "+38096546464");
         ph.put("Вітя", "+38451894198");
@@ -18,6 +21,7 @@ public class TreeMapPhoneBook {
         ph.put("Вова", "+31684321681");
         ph.put("Юля", "+35181651682");
         ph.put("Галя", "+35165161155");
+
 
 
         Set<Map.Entry<String, String>> mp = ph.entrySet();
@@ -33,7 +37,8 @@ public class TreeMapPhoneBook {
 
     TreeMap<String, String> ph = new TreeMap<>();
 
-    void recursia() {
+    public void cikl() {
+        for (int i = 0; ; i++){
         Scanner sc = new Scanner(System.in);
         System.out.println("****************************************");
         ph.put("Вася", "+38096546464");
@@ -101,9 +106,8 @@ public class TreeMapPhoneBook {
         }
 
         if (otvet.equals("вийти")) {
+            break;
 
-        } else {
-            recursia();
-        }
+        } }
     }
 }

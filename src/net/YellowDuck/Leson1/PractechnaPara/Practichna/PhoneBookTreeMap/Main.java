@@ -10,7 +10,7 @@ public class Main {
     TreeMapPhoneBook book = new TreeMapPhoneBook();
 
         book.mas();
-        book.recursia();
+        book.cikl();
 
 
     }

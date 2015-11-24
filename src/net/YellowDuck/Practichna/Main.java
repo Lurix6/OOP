@@ -1,4 +1,4 @@
-package net.YellowDuck.Leson1.Practichna;
+package net.YellowDuck.Practichna;
 
 import java.util.*;
 
