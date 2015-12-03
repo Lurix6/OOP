@@ -13,7 +13,6 @@ import java.util.Set;
  * Created by Вася on 28.11.2015.
  */
 public class Record {
-
     Integer sum = 0;
     Integer kalorDob;
     Integer vitrat = 0;
@@ -29,6 +28,10 @@ public class Record {
         tablo.put(kalorDob, kalorVi);
 
 
+    }
+
+    void addKalorijBaza( Integer kalorAdd , Integer kalorVit ){
+        tablo.put(kalorAdd,kalorVit);
     }
 
     void histori() {
@@ -79,9 +82,10 @@ public class Record {
             savedContacts.put(name, phone);
 
         }
-        tablo.putAll(savedContacts);
+
 
     }
+
 
 
 //    void Record() {

@@ -1,20 +1,21 @@
 package Modul2;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
  * Created by Вася on 26.11.2015.
  */
 public class Dialog {
+Account aka = new Account();
     Scanner sc = new Scanner(System.in);
 
-    Foods fd = new Foods();
     String stravaEat ;
     String name;
     int age;
     int height;
     int weight;
-
+    Integer kalorVitra;
 
 
     void vitanja(){
@@ -25,8 +26,21 @@ public class Dialog {
     }
 
     void foodEatToDay() {
-        System.out.println("Введіть страву яку ви сьгодіні їли " );
+        System.out.println("Скільки калорій ви витратили сьогодні  " );
+        kalorVitra = sc.nextInt();
 
+    }
+    void registr() throws IOException {
+        System.out.println("Щоб заповнити створити аккаунт дайте відповіді на всі питання");
+        System.out.println("1 Ваше ім'я");
+        String name =sc.next();
+        System.out.println("2 Скільки вам років (рок)");
+        Integer age = sc.nextInt();
+        System.out.println("3 Який ваш ріст (см)");
+        Integer height = sc.nextInt();
+        System.out.println("4 Яка ваша вага (кг)");
+        Integer weight = sc.nextInt();
+        aka.ak(name,age,height,weight);
     }
 
     void pitanja(){
