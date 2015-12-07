@@ -75,10 +75,8 @@ public class Main {
                     rekord.readMySpisikStrav();
                     System.out.println("очищено********************");
                 }if (additionally.equals("декілька")){
-                    System.out.println("Введіть страву ");
-                    String strava = sc.nextLine();
                     foods.readFoods();
-                    foods.dekilkaStrav(strava);
+                    foods.dekilkaStravGolovne();
                 }
             } else {
                 System.out.println("Ви нічого не ввили потрібні команди повторіть спробу");
