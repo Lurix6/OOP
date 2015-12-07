@@ -53,7 +53,7 @@ public class Main {
             } else if (variant.equalsIgnoreCase("додатково")) {
                 System.out.println("********************************************************************************");
                 System.out.println("Щоб додати нову страву (додати)\nЩоб переглянути додані вами страви (додана)\nЩоб записати додані вами блюда в базу данних(експорт)\n" +
-                        "Щоб очистити історію доданих страв (очистити)");
+                        "Щоб очистити історію доданих страв (очистити)\nЩоб додати декілька страв (декілька)");
                 System.out.println("********************************************************************************");
                 String additionally = sc.nextLine();
                 if (additionally.equalsIgnoreCase("додати")) {
@@ -74,6 +74,11 @@ public class Main {
                     rekord.clean2();
                     rekord.readMySpisikStrav();
                     System.out.println("очищено********************");
+                }if (additionally.equals("декілька")){
+                    System.out.println("Введіть страву ");
+                    String strava = sc.nextLine();
+                    foods.readFoods();
+                    foods.dekilkaStrav(strava);
                 }
             } else {
                 System.out.println("Ви нічого не ввили потрібні команди повторіть спробу");

@@ -28,10 +28,10 @@ public class Foods {
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
             if (entry.getKey().contains(searchFood)) {
                 searchFoods.put(entry.getKey(), entry.getValue());
-                System.out.println(searchFoods.size() + "" + entry.getKey() + "  \t " + entry.getValue());
-                nextSearchFood(); }
+                System.out.println("" + entry.getKey() + "  \t " + entry.getValue());
+                }
 
-        }
+        }nextSearchFood();
 
     }
     void nextSearchFood(){
@@ -75,6 +75,22 @@ public class Foods {
         this.res = ser;
     }boolean getOtvet(){
         return res;
+    }
+
+
+    void dekilkaStrav(String strava){
+            for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
+                if (entry.getKey().contains(strava)) {
+                    searchFoods.put(entry.getKey(), entry.getValue());
+                    System.out.println("" + entry.getKey() + "  \t " + entry.getValue());
+
+
+                }
+
+        }if (searchFoods.size() == 0){
+            System.out.println("Страви немає в базі данних");
+        }
+
     }
 
 
