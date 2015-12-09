@@ -17,8 +17,6 @@ public class FoodList  {
 
     public static final File FILE = new File("src/Vova/txt/txt/text.txt");
 
-    public FoodList(String понеділок, int i, String s, String марян) {
-    }
 
 
     public FoodEntry findFromListDay(String day) {
