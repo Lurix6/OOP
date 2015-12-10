@@ -9,29 +9,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Foods foods = new Foods();
+        Profil prof = new Profil();
         Record rekord = new Record();
         Scanner sc = new Scanner(System.in);
+        Dialog dia = new Dialog();
 
+        System.out.println("Бажаєте створити новий профіль (Так) Інакше ви зайдете під старим профілем");
+        String otvet = sc.nextLine();
+        if (otvet.equalsIgnoreCase("так")) {
+
+
+            prof.profil();
+            System.out.println("Вітаю вас " + prof.getName() + " .Профіль успішно створено норма калорій для вас " + prof.getNormaKalor());
+            rekord.historiOpenFile();
+            rekord.historiClean();
+            rekord.historiFail();
+            rekord.cleanSpisokStrav();
+            rekord.readMySpisikStrav();
+        }
         for (int i = 0; ; i++) {
 
-            System.out.println("\t\tМожливі дії ");
-            System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("\t\tМожливі дії");
+            System.out.println("++++++++++++++++++++++++++++++++++++++++++++ \nДенна норма калорій " + prof.getNormaKalor() + "\n********************************************");
             System.out.println("Додати звіт про день (додати)\nАбо переглянути історію (історія)\nЩоб вийти з програми набиріть (вийти)" +
                     "\nЩоб очистити історію (очистити)\nМеню страв (меню)\nЩоб відкрити додаткові функції введіть (додатково)\nЩоб додати звіт користуючись базою данних (нова)");
             String variant = sc.nextLine();
-            if (variant.equals("нова")){
+            if (variant.equals("нова")) {
                 System.out.println("Введіть страву яку ви бажаєте знайти ");
                 String searchFood = sc.nextLine();
                 foods.readFoods();
                 foods.searchFood(searchFood);
-                if (foods.getOtvet() == true ) {
+                if (foods.getOtvet() == true) {
                     System.out.println("Скільки калорій ви витрали?");
                     Integer kalirijVitrativ = sc.nextInt();
                     rekord.addKalorijBaza(foods.setKalorij(), kalirijVitrativ);
                     rekord.historiFail();
                 }
 
-            }else if (variant.equalsIgnoreCase("додати")) {
+            } else if (variant.equalsIgnoreCase("додати")) {
                 System.out.println("Скільки ви согоні спожили Калорій?");
                 Integer kalirijSpogiv = sc.nextInt();
                 System.out.println("Скільки калорій ви витрали?");
@@ -64,17 +79,24 @@ public class Main {
                     rekord.addFoodForSpisokStrav(newStrava, newKalorijnistStravi);
                     rekord.readMySpisikStrav();
                     System.out.println("Страву додано\n***********************************************");
-                } if(additionally.equalsIgnoreCase("додана")) {
+                }
+                if (additionally.equalsIgnoreCase("додана")) {
                     rekord.historiOpenFileSpisokStrav();
                     rekord.openFoodForSpisokStrav();
-                }if (additionally.equalsIgnoreCase("експорт")){
+                }
+                if (additionally.equalsIgnoreCase("експорт")) {
                     rekord.historiOpenFileSpisokStrav();
                     rekord.readFoodsFul();
-                }if (additionally.equalsIgnoreCase("чистити")){
-                    rekord.clean2();
+                    rekord.cleanSpisokStrav();
+                    rekord.feil();
+                    rekord.writeMySpisikStravInMainMenu();
+                }
+                if (additionally.equalsIgnoreCase("чистити")) {
+                    rekord.cleanSpisokStrav();
                     rekord.readMySpisikStrav();
                     System.out.println("очищено********************");
-                }if (additionally.equals("декілька")){
+                }
+                if (additionally.equals("декілька")) {
                     foods.readFoods();
                     foods.dekilkaStravGolovne();
                 }

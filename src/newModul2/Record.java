@@ -15,7 +15,7 @@ public class Record {
 
     Map<Integer, Integer> tablo = new LinkedHashMap<>();
     Map<String, Integer> spisikStrav = new HashMap<>();
-    Map<String , Integer> mainMenu = new HashMap<>();
+    Map<String , Integer> mainMenu = new LinkedHashMap<>();
 
     //додає звіти в tablo
     void addKalorijBaza(Integer kalorAdd, Integer kalorVit) {
@@ -71,7 +71,7 @@ public class Record {
 
 
         //очищає історію 2
-    }void clean2() throws IOException {
+    }void cleanSpisokStrav() throws IOException {
         spisikStrav.clear();
 
 
@@ -80,7 +80,7 @@ public class Record {
 
 // Робота над збережиними стравами та доданими новим контактом
 
-    //Витягає страви і кидає іх в spisokStrav
+    //Витягає додані страви і кидаємо іх в spisokStrav
     void historiOpenFileSpisokStrav() throws IOException {
         Map<String, Integer> savedContacts = new HashMap<>();
         Scanner scanner = new Scanner(new File("src/res/2.txt"));
@@ -133,6 +133,35 @@ public class Record {
 
         } mainMenu.putAll(spisikStrav);
     }
+    //записуємо MySpisikStrav в MainMenu на (src/res/ful.txt)
+    void  writeMySpisikStravInMainMenu() throws IOException {
+        PrintWriter writer = new PrintWriter(new FileWriter("src/res/ful.txt"));
+        writer.println(mainMenu.size());
+        for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
+            writer.println(entry.getKey());
+            writer.println(entry.getValue());
+        }
+
+        writer.close();
+
+
+    } void  feil() throws IOException {
+        PrintWriter writer = new PrintWriter(new FileWriter("src/res/ful.txt"));
+        writer.println(spisikStrav.size());
+        for (Map.Entry<String, Integer> entry : spisikStrav.entrySet()) {
+            writer.println(entry.getKey());
+            writer.println(entry.getValue());
+        }
+
+        writer.close();
+
+
+    }
+
+    void delitDataFromMainManu(){
+        mainMenu.clear();
+    }
+
 
 
 }

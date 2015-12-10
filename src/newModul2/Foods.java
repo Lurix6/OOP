@@ -146,11 +146,9 @@ public class Foods {
             System.out.println("В базі данних немає такої страви виберіть іншу");
             dekilkaStravGolovne();
         }
-
         end(sum);
-
-
-    }void end(int sum) throws IOException {
+    }
+    void end(int sum) throws IOException {
         System.out.println("Скільки калорій ви витратили з а сьгоднішній день ");
         Integer kalorVitrat = sc.nextInt();
 
