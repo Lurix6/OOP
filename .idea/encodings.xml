@@ -2,8 +2,18 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/Lesons/MapCplection/TreeMapDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Modul2/Account.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Modul2/Dialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Modul2/Foods.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Modul2/MainSuper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Modul2/Record.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/Somostijno/Abstrakt/Animals.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/Somostijno/Abstrakt/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Vova/txt/FoodList.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Vova/txt/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Vova/txt/txt/text.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/VovaMaop/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/VovaMaop/TimetableCouples.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Chitanja/Disc.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Acer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/Abstrakcia/Computer.java" charset="UTF-8" />
@@ -39,7 +49,13 @@
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/PractechnaPara/Practichna/TreeMapModern/TreeMapPhoneBook.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Leson1/TrivimirnijMasiv/Main.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/net/YellowDuck/Practichna/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/newModul2/Dialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/newModul2/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/newModul2/Record.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/readFile/Disc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/readFile/healp/FoodList.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/readFile/healp/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/readFile/lesson.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/res/1.txt" charset="UTF-8" />
   </component>
 </project>

@@ -7,7 +7,9 @@ import java.util.*;
  * Created by ���� on 03.12.2015.
  */
 public class Foods {
-    int sum  = 0;
+    int sum = 0;
+    static String strava;
+
     Record rek = new Record();
     Map<String, Integer> putAll = new LinkedHashMap<>();
     Map<String, Integer> mainMenu = new TreeMap<>();
@@ -86,73 +88,53 @@ public class Foods {
     }
 
 
-//    int dekilkaStrav() {
-//        String strava ;
-//        int sum = 0;
-//        int sum1 = 0;
-//
-//            System.out.println("Вкажіть страву ");
-//             strava = sc.nextLine();
-//
-//            for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
-//                if (entry.getKey().contains(strava)) {
-//                    searchFoods.put(entry.getKey(), entry.getValue());
-//                    System.out.println("" + entry.getKey() + "  \t " + entry.getValue());
-//
-//                }
-//            }
-//
-//
-//                if (searchFoods.size() >= 1 ) {
-//                    putAll.putAll(searchFoods);
-//                    System.out.println("Це доступні страви виберіть одну\t Щоб вийти з пошуку страв (ні)");
-//                    strava = sc.nextLine();
-//                }
-//
-//
-//
-//
-//
-//        return sum;
-//    }
-
-    void dekilkaStravGolovne () throws IOException {
+    void dekilkaStravGolovne() throws IOException {
         System.out.println("Введіть страву ");
-        String strava = sc.nextLine();
-        dekilkaStravPobichne(strava);
-
-    }
-    void dekilkaStravPobichne (String strava) throws IOException {
+        strava = sc.nextLine();
         searchFoods.clear();
+
+        recurs(strava);
+
+        if (sum > 0) {
+            end(sum);
+        }
+    }
+
+    void recurs(String strava) throws IOException {
         int sum1 = 0;
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
             if (entry.getKey().contains(strava)) {
                 searchFoods.put(entry.getKey(), entry.getValue());
                 System.out.println("" + entry.getKey() + "  \t " + entry.getValue());
-                sum1 = entry.getValue();
+                sum1 += entry.getValue();
             }
-        }if (searchFoods.size() == 1){
+        }
+        if (searchFoods.size() == 1) {
             sum += sum1;
             System.out.println("Страву додано ");
             System.out.println("Якщо хочите додати ще страву то напишіть (так) інакше ми продовжимо збирати нові данні ????");
             String otvet = sc.nextLine();
-            if(otvet.equals("так")){
-                dekilkaStravGolovne();
+            if (otvet.equals("так")) {
+
             }
-        }else if (searchFoods.size() >= 2){
+        } else if (searchFoods.size() >= 2) {
             System.out.println("Оберіть одну з цих страв");
             dekilkaStravGolovne();
-        }else if (searchFoods.size() == 0){
+            sum1 = 0 ;
+        } else if (searchFoods.size() == 0) {
             System.out.println("В базі данних немає такої страви виберіть іншу");
             dekilkaStravGolovne();
+            sum1 = 0;
         }
-        end(sum);
+
     }
+
+
     void end(int sum) throws IOException {
         System.out.println("Скільки калорій ви витратили з а сьгоднішній день ");
         Integer kalorVitrat = sc.nextInt();
 
-        rek.addKalorijBaza(sum , kalorVitrat);
+        rek.addKalorijBaza(sum, kalorVitrat);
         rek.historiFail();
     }
 
