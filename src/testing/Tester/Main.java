@@ -9,11 +9,45 @@ import java.util.Scanner;
  * Created by Вася on 11.12.2015.
  */
 public class Main {
-
+    private static Scanner sc = new Scanner(System.in);
+    private static Work work = new Work();
     private static ArrayList<Rozklad> list = new ArrayList<Rozklad>();
 
     public static void main(String[] args) {
-        list.clear();
+
+
+        for (int i = 0 ; ; i++){
+            System.out.println("Щоб додати Звіт Введіть (додати) також можна вивести на екран наявні (елементи)\n бо очистити (історію) Витягти окремий (день)");
+            String otvet = sc.nextLine();
+            if(otvet.equalsIgnoreCase("додати")){
+                work.add();
+                try {
+                    saveToFile();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }if (otvet.equalsIgnoreCase("елементи")) {
+                for (Rozklad m : list) {
+                    System.out.println(m.getDay() + " " + m.getPara() + " " + m.getPredmet() + " " + m.getVikladach() + " " + m.getOcinca()); // àáäûðäà
+                }
+
+            }if (otvet.equalsIgnoreCase("історію")){
+                list.clear();
+            }if(otvet.equalsIgnoreCase("день")){
+                System.out.println("Вкажіть день");
+                String day = sc.nextLine();
+                if (list.contains(day)){
+                    int index = list.indexOf(day);
+
+                    System.out.println(list.get(index));
+                }else {
+                    System.out.println("такого елемента немає в базі");
+                }
+
+            }
+        }
+
+
 
 //        list.add(new Rozklad("Понеділок", 1, "Інженерна графіка", "Марян", "B"));
 //        list.add(new Rozklad("Понеділок", 2, "Фізика лекція", "Конопльов", "A"));
@@ -41,15 +75,15 @@ public class Main {
 //        list.add(new Rozklad("Пятниця ", 4, "Немає пари", "", "C"));
 //        list.add(new Rozklad("Пятниця ", 5, "Немає пари", "", "D"));
 //
-        try {
-            loadFromFile();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        for (Rozklad m : list) {
-            System.out.println(m.getDay() + " " + m.getPara() + " " + m.getPredmet() + " " + m.getVikladach() + " " + m.getOcinca()); // àáäûðäà
-        }
 
+
+
+
+    }
+    void add(String day , Integer para, String predmet , String vicklad,String ocinka){
+
+        list.add(new Rozklad(day,para,predmet,vicklad,ocinka));
+        System.out.println("додано");
     }
 
     public static void saveToFile() throws FileNotFoundException {
