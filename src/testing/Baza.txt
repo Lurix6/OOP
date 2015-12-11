@@ -1,0 +1,2 @@
+Відеокарти: 
+[testing.TovarEntry@5cad8086, testing.TovarEntry@6e0be858, testing.TovarEntry@61bbe9ba]
