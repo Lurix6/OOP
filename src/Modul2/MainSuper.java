@@ -15,17 +15,6 @@ public class MainSuper {
         Account aka = new Account();
 
 
-//        System.out.println("Якщо бажаєте створити новий профіль введіть (новий). Якщо не бажаєте то просто клацніт на Enter");
-//        String profil = sc.nextLine();
-//        if (profil.equalsIgnoreCase("новий")) {
-//            aka.cleanAccount();
-//            rek.historiClean();
-//            rek.historiFail();
-//
-//            dia.registr();
-//
-//        }
-
 
         for (int i = 0; ; i++) {
 
@@ -62,18 +51,17 @@ public class MainSuper {
                     System.out.println("Скільки калорій має ця страва в 100г");
                     Integer calor = sc.nextInt();
                     foods.novaStrava(strava, calor);
-
                 } else if (variantStrava.equalsIgnoreCase("Що я їв")) {
                     dia.foodEatToDay();
                     System.out.println("Введть страву яку ви їли");
                     foods.poshook();
                     rek.historiOpenFile();
+
                     rek.historiFail();
 
                 }
 
             }else if (variant.equalsIgnoreCase("меню")){
-
 
                 foods.menu();
             }

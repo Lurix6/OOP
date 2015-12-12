@@ -63,9 +63,9 @@ public class Foods {
         }
     }
 
+
     void menu() throws IOException {
-        rek.historiOpenFile();
-        rek.historiFail();
+
 
         for (Map.Entry<String, Integer> entry : savedFood.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());

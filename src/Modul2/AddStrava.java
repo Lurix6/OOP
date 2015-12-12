@@ -9,7 +9,7 @@ import java.util.TreeMap;
 /**
  * Created by Вася on 28.11.2015.
  */
-public class AddStrava extends Food {
+public class AddStrava  {
     void novaStrava(String Strava , Integer calor) throws IOException {
 
         Map<String, Integer> novaStrava = new TreeMap<>();
