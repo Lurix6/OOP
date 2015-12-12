@@ -102,7 +102,8 @@ public class Rozklad {
 
 
     public void addDay() {
-        System.out.println("Вкажіть дeнь ");
+        System.out.println();
+        System.out.println("Вкажіть дeнь  ");
         String day = sc.nextLine();
         System.out.println("Введіть пару (число)");
         String para = sc.nextLine();
