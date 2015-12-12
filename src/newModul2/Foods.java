@@ -26,7 +26,9 @@ public class Foods {
             mainMenu.put(strava, kalorija);
         }
     }
-
+    /**
+     Функція виводить всі наявні страви За вказаними даними і переходит в nextSearchFood() .
+     */
 
     void searchFood(String searchFood) {
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
@@ -40,6 +42,10 @@ public class Foods {
 
     }
 
+    /**
+     Умовно приймає з функції  searchFood  список страв і дозволяє зробити вибір страви Якщо ви вибрали страву то вона кидає
+     true в prijoim (true показник що функція пройшла успішно)
+     */
     void nextSearchFood() {
         if (searchFoods.size() == 0) {
             System.out.println("Вбазі немає такої страви");
@@ -61,6 +67,7 @@ public class Foods {
     }
 
     int kalorij = 0;
+
 
     void searchFood1(String elment) {
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
@@ -88,20 +95,17 @@ public class Foods {
     }
 
 
-    void dekilkaStravGolovne() throws IOException {
+    /**
+     За допомогую цього метода можно додавати декілька страв за один день
+     */
+
+    void recurs() throws IOException {
         System.out.println("Введіть страву ");
         strava = sc.nextLine();
         searchFoods.clear();
 
-        recurs(strava);
-
-        if (sum > 0) {
-            end(sum);
-        }
-    }
-
-    void recurs(String strava) throws IOException {
         int sum1 = 0;
+
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
             if (entry.getKey().contains(strava)) {
                 searchFoods.put(entry.getKey(), entry.getValue());
@@ -115,27 +119,25 @@ public class Foods {
             System.out.println("Якщо хочите додати ще страву то напишіть (так) інакше ми продовжимо збирати нові данні ????");
             String otvet = sc.nextLine();
             if (otvet.equals("так")) {
+                recurs();
 
+            }else{
+                System.out.println("Скільки калорій ви витратили з а сьгоднішній день ");
+                Integer kalorVitrat = sc.nextInt();
+
+                rek.addKalorijBaza(sum, kalorVitrat);
+                rek.historiFail();
             }
         } else if (searchFoods.size() >= 2) {
             System.out.println("Оберіть одну з цих страв");
-            dekilkaStravGolovne();
+            recurs();
             sum1 = 0 ;
         } else if (searchFoods.size() == 0) {
             System.out.println("В базі данних немає такої страви виберіть іншу");
-            dekilkaStravGolovne();
+            recurs();
             sum1 = 0;
         }
 
-    }
-
-
-    void end(int sum) throws IOException {
-        System.out.println("Скільки калорій ви витратили з а сьгоднішній день ");
-        Integer kalorVitrat = sc.nextInt();
-
-        rek.addKalorijBaza(sum, kalorVitrat);
-        rek.historiFail();
     }
 
 }

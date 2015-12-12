@@ -15,7 +15,7 @@ public class Record {
 
     Map<Integer, Integer> tablo = new LinkedHashMap<>();
     Map<String, Integer> spisikStrav = new HashMap<>();
-    Map<String , Integer> mainMenu = new LinkedHashMap<>();
+    Map<String, Integer> mainMenu = new LinkedHashMap<>();
 
     //додає звіти в tablo
     void addKalorijBaza(Integer kalorAdd, Integer kalorVit) {
@@ -38,7 +38,7 @@ public class Record {
         }
     }
 
-            //читає та записує історію в tablo
+    //читає та записує історію в tablo
     void historiOpenFile() throws IOException {
         Map<Integer, Integer> savedContacts = new HashMap<>();
         Scanner scanner = new Scanner(new File("src/res/histori.txt"));
@@ -71,7 +71,9 @@ public class Record {
 
 
         //очищає історію 2
-    }void cleanSpisokStrav() throws IOException {
+    }
+
+    void cleanSpisokStrav() throws IOException {
         spisikStrav.clear();
 
 
@@ -121,8 +123,7 @@ public class Record {
     }
 
 
-
-     //Експорт pisokStrav
+    //Експорт pisokStrav
     void readFoodsFul() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("src/res/ful.txt"));
         int size = Integer.parseInt(scanner.nextLine());
@@ -131,10 +132,12 @@ public class Record {
             Integer kalorija = Integer.parseInt(scanner.nextLine());
             mainMenu.put(strava, kalorija);
 
-        } mainMenu.putAll(spisikStrav);
+        }
+        mainMenu.putAll(spisikStrav);
     }
+
     //записуємо MySpisikStrav в MainMenu на (src/res/ful.txt)
-    void  writeMySpisikStravInMainMenu() throws IOException {
+    void writeMySpisikStravInMainMenu() throws IOException {
         PrintWriter writer = new PrintWriter(new FileWriter("src/res/ful.txt"));
         writer.println(mainMenu.size());
         for (Map.Entry<String, Integer> entry : mainMenu.entrySet()) {
@@ -145,7 +148,9 @@ public class Record {
         writer.close();
 
 
-    } void  feil() throws IOException {
+    }
+
+    void feil() throws IOException {
         PrintWriter writer = new PrintWriter(new FileWriter("src/res/ful.txt"));
         writer.println(spisikStrav.size());
         for (Map.Entry<String, Integer> entry : spisikStrav.entrySet()) {
@@ -158,10 +163,9 @@ public class Record {
 
     }
 
-    void delitDataFromMainManu(){
+    void delitDataFromMainManu() {
         mainMenu.clear();
     }
-
 
 
 }
